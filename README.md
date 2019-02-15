@@ -1,4 +1,4 @@
-2 WAYS TO RUN currency-converted:
+2 WAYS TO RUN currency-converter:
 
 Open terminal...
 
