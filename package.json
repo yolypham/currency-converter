@@ -1,25 +1,26 @@
 {
-  "name": "currency-converter",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "currency-converter",
+    "version": "1.0.0",
+    "scripts": {
+        "client": "cd client && react-scripts start",
+        "server": "nodemon server.js",
+        "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+        "build": "cd client && react-scripts build"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.15",
+        "@fortawesome/free-solid-svg-icons": "^5.7.2",
+        "@fortawesome/react-fontawesome": "^0.1.4",
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "nodemon": "^1.18.10",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "react-fontawesome": "^1.6.1",
+        "react-scripts": "2.1.5"
+    },
+    "devDependencies": {
+        "concurrently": "^4.0.1"
+    }
 }
