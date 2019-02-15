@@ -1,3 +1,17 @@
+2 WAYS TO RUN currency-converter:
+
+Open terminal...
+
+a) Run both node back-end server API and client with this command:
+  npm run start
+  
+b) Or, run just the client with this command: 
+  npm run client
+  and follow this link https://github.com/yolypham/currency to run Java rest API server
+  
+  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
