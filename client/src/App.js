@@ -85,11 +85,12 @@ class App extends Component {
   }
 
   convertHandler = async (value, currencyType) => {
+    const numVal = value.replace(/,/g, '')
     try {
       //POST
       const conversionResult = await postConversion(
         {
-          amount: value,
+          amount: numVal,
           currency: currencyType
         })
 
@@ -100,7 +101,7 @@ class App extends Component {
       }
 
       await this.setState({
-        fromValue: value,
+        fromValue: numVal,
         fromCurrency: currencyType,
         toValue: conversionResult.amount
       })

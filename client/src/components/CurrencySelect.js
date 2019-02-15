@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faCheck, faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import CurrencyInput from 'react-currency-input';
 
 import '../styles/globalSelect.css'
 
@@ -10,7 +11,7 @@ class CurrencySelect extends Component {
         this.state = {
             listOpen: false,
             headerTitle: this.props.title,
-            amount: ""
+            amount: "0"
         }
         this.close = this.close.bind(this)
     }
@@ -54,7 +55,7 @@ class CurrencySelect extends Component {
     }
 
     inputChangeHandler = (event) => {
-        const val = event.target.value
+        const val = event.replace(/,/g, '')
         this.setState({ amount: val })
 
         if (this.state.headerTitle !== "...") {
@@ -63,7 +64,7 @@ class CurrencySelect extends Component {
     }
 
     resetAmount = () => {
-        this.setState({ amount: "" })
+        this.setState({ amount: "0" })
         this.props.onClearInput()
     }
 
@@ -74,12 +75,20 @@ class CurrencySelect extends Component {
             <div className="select-control">
                 <span className="dd-amount-box">
                     <span className="input-amount-box">
-                        <input
+                        {/* <input
                             className="dd-amount"
                             onChange={this.inputChangeHandler}
                             type="text"
                             value={this.state.amount}
-                        ></input>
+                        ></input> */}
+                        <CurrencyInput
+                            // decimalSeparator="."
+                            // thousandSeparator=","
+                            precision="2"
+                            className="dd-amount"
+                            onChange={this.inputChangeHandler}
+                            value={this.state.amount}
+                        />
                     </span>
 
                     <span className="clear-x">
