@@ -1,11 +1,14 @@
-2 Ways to try currency converter:
+2 WAYS TO RUN currency-converted:
 
 Open terminal...
+
 a) Run both node back-end server API and client with this command:
   npm run start
+  
 b) Or, run just the client with this command: 
   npm run client
   and follow this link https://github.com/yolypham/currency to run Java rest API server
+  
   
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
